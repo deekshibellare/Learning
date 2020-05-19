@@ -1,14 +1,6 @@
 # Xcode compile time optimization
 ---
-Steps
-PreProcessor -> Compiler -> Assembler -> Linker -> Loader
 
-Pre processor - Discovers dependencies, expand macros  etc
-Compiler - Code into machine code
-Assembler - produces Mach-O file
-Linker - Object Files + dylib, .a , .tbd => Single Executable file
-Loader - bring the program into memory
-----
 ## Compilation Mode
 Debug Configuration — Incremental Mode (The driver divides the work it has to do between multiple frontend processes), 
 Release Configuration — Whole Module (Driver dispatches to single block of code)
@@ -23,8 +15,11 @@ Release Configuration — Whole Module (Driver dispatches to single block of cod
 Debug Information Format
 DWARF, Release Configuration DWARF with dSYM file
 
-## Final classes
+## Mark classes as final by default
 ## Remove warnings in the app
+## Try to use single language code base. Avoid use of mutiple langugaes if possible
+## Avoid @objc flag unless required.
+## Type infrence is slower. Use expelicityly specified types if compile time is very slow
 
 
 ##Run script:
